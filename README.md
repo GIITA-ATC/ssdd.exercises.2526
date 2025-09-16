@@ -1,1 +1,1 @@
-# ssdd.exercises.2526
+# ssdd.exercises
