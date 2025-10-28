@@ -2,7 +2,7 @@ VENV        := .venv
 PY          := $(VENV)/bin/python
 PIP         := $(VENV)/bin/pip
 
-.PHONY: all install run-server run-client clean distclean
+.PHONY: all install run-publisher run-subscriber clean distclean
 
 all: install
 
@@ -13,10 +13,10 @@ install: $(VENV)
 	$(PIP) install --upgrade pip
 	$(PIP) install -r requirements.txt
 
-run-server:
+run-publisher:
 	$(PY) publisher.py
 
-run-client:
+run-subscriber:
 	$(PY) subscriber.py -d "CD Projekt" Ubisoft -t RPG
 
 clean:
