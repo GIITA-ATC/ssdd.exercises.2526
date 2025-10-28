@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 
+import sys
 import socket
 from door_pb2 import ControlMessage, ResponseMessage
 
-SOCKET_PORT = 1234
+SOCKET_PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 10001
 
 
 class Door:
